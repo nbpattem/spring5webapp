@@ -14,6 +14,11 @@ public class Author {
     private String firstName;
     private String lastName;
 
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public Set<Book> getBooks() {
         return books;
     }
@@ -71,6 +76,6 @@ public class Author {
 
     @Override
     public int hashCode() {
-        return id.hashCode();
+        return null != id ? id.hashCode() :0;
     }
 }
